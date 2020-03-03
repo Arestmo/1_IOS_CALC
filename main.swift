@@ -1,3 +1,4 @@
+import Foundation;
 print("Kalkulator Figur Płaskich");
 
 var choice : String = "0";
@@ -28,14 +29,14 @@ choice = String(readLine()!);
       case "1":
       print("Podaj bok: ");
       let value = String(readLine()!);
-      let a = Int(value) ?? 0;
+      let a = Double(value) ?? 0;
       let result = a * a;
       print(result);
 
       case "2":
       print("Podaj bok: ");
       let value = String(readLine()!);
-      let a = Int(value) ?? 0;
+      let a = Double(value) ?? 0;
       let result = 4 * a;
       print(result);
 
@@ -52,23 +53,21 @@ choice = String(readLine()!);
     switch choice_2 
     {
       case "1":
+      
       print("Podaj bok 1: ");
-      var value = String(readLine()!);
-      let a = Int(value) ?? 0;
-      print("Podaj bok 2: ");
-      value = String(readLine()!);
-      let b = Int(value) ?? 0;
-      let result = a * b;
+      let value = String(readLine()!);
+      let a = Double(value) ?? 0;
+      
+      let result = ( pow(Double(a),2.0) * sqrt(3)) / 4 ;
       print(result);
 
       case "2":
+      
       print("Podaj bok 1: ");
-      var value = String(readLine()!);
-      let a = Int(value) ?? 0;
-      print("Podaj bok 2: ");
-      value = String(readLine()!);
-      let b = Int(value) ?? 0;
-      let result = (2 * a) + (2 * b);
+      let value = String(readLine()!);
+      let a = Double(value) ?? 0;
+      
+      let result = 3 * a;
       print(result);
 
       default:
